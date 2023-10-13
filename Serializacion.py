@@ -35,3 +35,14 @@ xml_data = ET.tostring(
     ET.Element("docentes", attrib={"total": str((docentes))}),
     encoding="utf-8"
 )
+
+# Imprimimos los datos serializados
+print("YAML:")
+print(yaml_data)
+
+print("JSON:")
+print(json_data)
+print("\n")
+
+print("XML:")
+print(xml_data)
