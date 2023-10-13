@@ -21,5 +21,17 @@ docentes = [
     crear_docente("Roberto Perez", 10029, "Tutorias"),
     crear_docente("Adriana", 10030, "Equipos de alto rendimiento"),
     crear_docente("Zaul Hernandez", 19040067, "Alumno"),
+    crear_docente("Alessandra Sanchez", 20045147, "Alumno"),
 ]
 
+# Serializamos los datos en YAML
+yaml_data = yaml.dump(docentes, default_flow_style=False)
+
+# Serializamos los datos en JSON
+json_data = json.dumps(docentes)
+
+# Serializamos los datos en XML
+xml_data = ET.tostring(
+    ET.Element("docentes", attrib={"total": str((docentes))}),
+    encoding="utf-8"
+)
